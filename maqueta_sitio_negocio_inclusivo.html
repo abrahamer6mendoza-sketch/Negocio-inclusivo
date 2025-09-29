@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>InclusiónLab — Servicios de Limpieza con Impacto Social</title>
+  <meta name="description" content="Empresa de servicios de limpieza que genera empleo digno para adultos mayores y personas con discapacidad." />
+  <!-- Simple accessible styles (high-contrast-friendly) -->
+  <style>
+    :root{
+      --bg:#ffffff; --text:#0b0b0b; --accent:#0a6b56; --muted:#4a4a4a; --focus: #ffbf47;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);}
+    a{color:var(--accent);}
+    header{border-bottom:2px solid #e6e6e6}
+    .container{max-width:980px;margin:0 auto;padding:20px}
+
+    /* Skip link */
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{position:static;width:auto;height:auto;padding:8px 12px;margin:8px;background:#000;color:#fff;z-index:1000}
+
+    nav{display:flex;justify-content:space-between;align-items:center}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{width:44px;height:44px;border-radius:8px}
+    .nav-links{display:flex;gap:16px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+
+    main{padding:28px 0}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+    .hero h1{font-size:1.8rem;margin:0}
+    .hero p{color:var(--muted);line-height:1.4}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .card{padding:16px;border:1px solid #e6e6e6;border-radius:10px;background:#fafafa}
+
+    form{display:grid;gap:10px}
+    label{font-weight:600}
+    input[type="text"],input[type="email"],textarea,select{padding:8px;border:1px solid #cfcfcf;border-radius:6px}
+    textarea{min-height:100px}
+
+    footer{border-top:1px solid #e6e6e6;padding:18px 0;margin-top:24px;color:var(--muted)}
+
+    /* Focus styles for keyboard operability */
+    :focus{outline:3px solid var(--focus);outline-offset:2px}
+
+    /* Responsive tweaks */
+    @media(min-width:720px){
+      .hero{grid-template-columns:1fr 420px}
+      .hero h1{font-size:2.2rem}
+    }
+  </style>
+</head>
+<body>
+  <!--
+    Maqueta pensada con la metodología POUR (Perceivable, Operable, Understandable, Robust)
+    - Perceivable: textos claros, contrastes, alt en imágenes, skip link
+    - Operable: focus visible, keyboard navigation, enlaces claros
+    - Understandable: lenguaje simple, instrucciones en formularios, etiquetas
+    - Robust: HTML semántico, roles y aria cuando aplica
+  -->
+
+  <a href="#maincontent" class="skip-link">Saltar al contenido principal</a>
+
+  <header role="banner">
+    <div class="container">
+      <nav aria-label="Navegación principal">
+        <div class="brand">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><rect width='64' height='64' rx='12' fill='%230a6b56'/><text x='50%' y='55%' font-size='28' text-anchor='middle' fill='white' font-family='Arial' dy='.3em'>IL</text></svg>" alt="Logotipo InclusiónLab" />
+          <div>
+            <strong>InclusiónLab</strong>
+            <div style="font-size:12px;color:var(--muted)">Servicios de limpieza con impacto social</div>
+          </div>
+        </div>
+
+        <div class="nav-links" role="navigation">
+          <a href="#about">Sobre nosotros</a>
+          <a href="#services">Servicios</a>
+          <a href="#join">Únete</a>
+          <a href="#contact">Contacto</a>
+          <a class="btn" href="#book">Reservar</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="maincontent" tabindex="-1">
+    <div class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title">Servicios de limpieza de alta calidad que generan empleo digno</h1>
+          <p>Contrata servicios profesionales mientras transformas vidas. Nuestro equipo está conformado por adultos mayores y personas con discapacidad leve, capacitados y acompañados para ofrecer trabajo responsable y confiable.</p>
+
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="#book">Reservar servicio</a>
+            <a href="#about">Conoce nuestra misión</a>
+          </div>
+
+          <div class="cards" style="margin-top:18px">
+            <article class="card" aria-labelledby="card1-title">
+              <h3 id="card1-title">Empleo digno</h3>
+              <p>Capacitamos y contratamos a personas que enfrentan barreras para insertarse en el mercado laboral.</p>
+            </article>
+            <article class="card" aria-labelledby="card2-title">
+              <h3 id="card2-title">Calidad y confianza</h3>
+              <p>Protocolos estandarizados, supervisión y seguro de responsabilidad para cada servicio.</p>
+            </article>
+            <article class="card" aria-labelledby="card3-title">
+              <h3 id="card3-title">Sostenibilidad</h3>
+              <p>Productos de limpieza ecológicos y prácticas que reducen impacto ambiental.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside aria-labelledby="impact" style="padding:18px;border-radius:10px;border:1px solid #e6e6e6;background:#ffffff">
+          <h2 id="impact">Impacto</h2>
+          <p style="color:var(--muted)">Cada servicio contrata mínimo a una persona en situación vulnerable. Al crecer, escalamos este beneficio.</p>
+          <dl>
+            <dt>Empleados contratados</dt><dd>20 (objetivo fase 1)</dd>
+            <dt>Clientes satisfechos</dt><dd>+95% de satisfacción en encuestas</dd>
+          </dl>
+        </aside>
+      </section>
+
+      <section id="about" aria-labelledby="about-title" style="margin-top:28px">
+        <h2 id="about-title">Nuestra misión y promesa de valor</h2>
+        <p>El propósito de InclusiónLab es ofrecer empleo digno a quienes han sido excluidos del mercado laboral, sin sacrificar la calidad del servicio. Garantizamos puntualidad, seguridad y atención personalizada.</p>
+
+        <h3>¿Qué problema solucionamos?</h3>
+        <p>El desempleo y la discriminación hacia adultos mayores y personas con discapacidad en el ámbito laboral.</p>
+      </section>
+
+      <section id="services" aria-labelledby="services-title" style="margin-top:28px">
+        <h2 id="services-title">Servicios</h2>
+        <ul>
+          <li><strong>Limpieza residencial:</strong> Limpieza profunda, mantenimiento semanal y plan por horas.</li>
+          <li><strong>Limpieza comercial:</strong> Oficinas, locales, y limpieza general con facturación formal.</li>
+          <li><strong>Mantenimiento ligero:</strong> Reparaciones menores, jardinería básica, y cuidado de instalaciones.</li>
+        </ul>
+      </section>
+
+      <section id="join" aria-labelledby="join-title" style="margin-top:28px">
+        <h2 id="join-title">Únete como empleado</h2>
+        <p>Si eres adulto mayor, tienes alguna discapacidad leve o conoces a alguien que quiera trabajar con nosotros, inscríbete. Ofrecemos capacitación, horarios flexibles y acompañamiento.</p>
+
+        <form aria-label="Formulario de inscripción de empleados" onsubmit="event.preventDefault();alert('Formulario simulado: gracias por registrarte.');">
+          <label for="fullname">Nombre completo</label>
+          <input id="fullname" name="fullname" type="text" required aria-required="true" />
+
+          <label for="age">Edad</label>
+          <input id="age" name="age" type="text" inputmode="numeric" />
+
+          <label for="condition">¿Tienes alguna condición o requerimiento especial?</label>
+          <select id="condition" name="condition">
+            <option value="none">Ninguno</option>
+            <option value="disability">Discapacidad</option>
+            <option value="caregiving">Responsabilidades de cuidado</option>
+            <option value="other">Otro</option>
+          </select>
+
+          <label for="message">Mensaje o experiencia previa (opcional)</label>
+          <textarea id="message" name="message"></textarea>
+
+          <button class="btn" type="submit">Enviar inscripción</button>
+        </form>
+      </section>
+
+      <section id="book" aria-labelledby="book-title" style="margin-top:28px">
+        <h2 id="book-title">Reservar servicio</h2>
+        <p>Contrata un servicio en línea. El proceso es simple y accesible.</p>
+
+        <form aria-label="Formulario de reserva" onsubmit="event.preventDefault();alert('Reserva simulada. Te contactaremos.');">
+          <label for="cname">Nombre del cliente</label>
+          <input id="cname" name="cname" type="text" required />
+
+          <label for="cemail">Correo electrónico</label>
+          <input id="cemail" name="cemail" type="email" required />
+
+          <label for="type">Tipo de servicio</label>
+          <select id="type" name="type">
+            <option>Residencial - Limpieza profunda</option>
+            <option>Residencial - Mantenimiento</option>
+            <option>Comercial - Oficina</option>
+          </select>
+
+          <label for="date">Fecha preferente</label>
+          <input id="date" name="date" type="date" />
+
+          <button class="btn" type="submit">Solicitar</button>
+        </form>
+      </section>
+
+      <section id="accessibility" aria-labelledby="acc-title" style="margin-top:28px">
+        <h2 id="acc-title">Accesibilidad y cumplimiento POUR</h2>
+        <p>Esta maqueta incorpora buenas prácticas de accesibilidad siguiendo la metodología <strong>POUR</strong>:</p>
+        <ul>
+          <li><strong>Perceivable:</strong> textos legibles, contrastes altos, imágenes con <code>alt</code>, estructura semántica.</li>
+          <li><strong>Operable:</strong> navegación con teclado, enlaces claros, foco visible.</li>
+          <li><strong>Understandable:</strong> lenguaje simple, etiquetas en formularios y mensajes claros.</li>
+          <li><strong>Robust:</strong> HTML semántico y uso de atributos ARIA cuando es necesario.</li>
+        </ul>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title" style="margin-top:28px">
+        <h2 id="contact-title">Contacto</h2>
+        <p>Teléfono: <a href="tel:+5215555555555">+52 1 55 5555 5555</a> · Correo: <a href="mailto:contacto@inclusionlab.org">contacto@inclusionlab.org</a></p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>InclusiónLab — Empresa social de servicios de limpieza · <a href="#accessibility">Política de accesibilidad</a></p>
+      <p style="font-size:12px;color:var(--muted)">Diseñado con enfoque inclusivo. Texto y controles legibles, navegación por teclado y formularios accesibles.</p>
+    </div>
+  </footer>
+
+  <!-- Minimal script to enhance keyboard accessibility of menu on small screens (keeps progressive enhancement) -->
+  <script>
+    // No critical JS required; keep robust and usable even if JS off.
+  </script>
+</body>
+</html>
